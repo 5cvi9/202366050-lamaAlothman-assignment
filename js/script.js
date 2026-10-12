@@ -210,12 +210,12 @@ filterButtons.forEach(function (button) {
 
             card.hidden = !matches;
 
-            // Restart the animation for visible cards
-            card.classList.remove("animate__animate");
+            // Restart the fade-in animation for visible projects
+            card.classList.remove("filter-animate");
 
             if (matches) {
-                void card.offsetWidth; // Trigger reflow
-                card.classList.add("animate__animate");
+                void card.offsetWidth;
+                card.classList.add("filter-animate");
             }
         });
 
