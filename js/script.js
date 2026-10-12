@@ -59,6 +59,7 @@ form.addEventListener("submit", function (event) {
             "Your message is ready! This form is for demonstration only.";
 
         message.classList.add("success-message");
+        message.classList.remove("form-error");
 
         form.reset();
 
@@ -68,8 +69,12 @@ form.addEventListener("submit", function (event) {
             input.removeAttribute("aria-invalid");
         });
     } else {
-        message.textContent = "";
+        // Show feedback when the form contains invalid fields
+        message.textContent =
+            "Please correct the highlighted fields before continuing.";
+
         message.classList.remove("success-message");
+        message.classList.add("form-error");
 
         // Focus on the first invalid field
         const firstInvalid = form.querySelector(".input-error");
@@ -80,14 +85,49 @@ form.addEventListener("submit", function (event) {
     }
 });
 
-// Clear feedback when the user edits a field
+
+// REAL-TIME FORM VALIDATION
+
+
+// Validate each field while the user types
+function validateField(input) {
+    const value = input.value.trim();
+
+    if (input === nameInput) {
+        const error = value.length < 2
+            ? "Please enter at least 2 characters."
+            : "";
+
+        showError(input, "name-error", error);
+    }
+
+    if (input === emailInput) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        const error = emailPattern.test(value)
+            ? ""
+            : "Please enter a valid email address.";
+
+        showError(input, "email-error", error);
+    }
+
+    if (input === messageInput) {
+        const error = value.length === 0
+            ? "Please enter a message."
+            : "";
+
+        showError(input, "message-error", error);
+    }
+}
+
+// Check inputs as the user types
 [nameInput, emailInput, messageInput].forEach(function (input) {
     input.addEventListener("input", function () {
-        const errorId = input.id + "-error";
+        validateField(input);
 
-        showError(input, errorId, "");
+        // Clear previous submission feedback
         message.textContent = "";
-        message.classList.remove("success-message");
+        message.classList.remove("success-message", "form-error");
     });
 });
 
@@ -173,7 +213,7 @@ filterButtons.forEach(function (button) {
             // Restart the animation for visible cards
             card.classList.remove("animate__animate");
 
-            if(matches){
+            if (matches) {
                 void card.offsetWidth; // Trigger reflow
                 card.classList.add("animate__animate");
             }

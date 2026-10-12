@@ -105,3 +105,16 @@ form .input-error:focus {
         animation: none;
     }
 }
+/* ERROR HANDLING AND USER FEEDBACK */
+
+#form-message.form-error {
+    color: #b42318;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Smooth feedback when an input becomes invalid */
+form input,
+form textarea {
+    transition: border-color 0.2s ease, outline-color 0.2s ease;
+}
