@@ -1,3 +1,4 @@
+
 # AI Usage Report — Assignment 2
 
 ## 1. Tools Used & Use Cases
