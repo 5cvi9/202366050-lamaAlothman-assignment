@@ -2,57 +2,64 @@
 
 ## 1. Tools Used & Use Cases
 
-I used ChatGPT as an AI-assisted development tool while improving my personal portfolio for Assignment 2. My main goal was to understand how to introduce more interactive features while maintaining the structure and design developed in Assignment 1.
+I used ChatGPT as an AI-assisted development tool while improving my personal portfolio for Assignment 2. My goal was to introduce interactive features while maintaining the design and structure developed in Assignment 1.
 
 ChatGPT supported several parts of the development process:
 
-- **Dynamic Content:** Helped me understand and implement project filtering using JavaScript event listeners and HTML `data-category` attributes.
-- **Form Validation:** Provided explanations and suggestions for validating user input, displaying field-specific error messages, and updating feedback while users type.
-- **Animations and Transitions:** Helped me implement subtle fade-in animations for project cards and form feedback without making the website distracting.
-- **Code Organization:** Assisted with separating the original CSS file into `styles.css`, `components.css`, and `responsive.css` to improve readability and maintainability.
-- **Code Review and Testing:** Helped me identify possible implementation issues and plan tests for the new interactive features.
-- **Documentation and Git:** Provided guidance on meaningful commits and organizing the README and technical documentation.
+- **Dynamic Content:** Helped me implement project filtering using JavaScript event listeners and HTML data attributes.
+- **Project Search:** Provided guidance on adding live search and combining it with category filtering through a shared JavaScript function.
+- **Error Handling:** Helped me implement empty-state feedback and a Clear Search button when no projects match.
+- **Form Validation:** Provided explanations and suggestions for validating user input and displaying real-time error messages.
+- **Animations:** Helped me implement subtle fade-in effects for project cards and form feedback.
+- **Code Organization:** Assisted with separating the original CSS into three files for better maintainability.
+- **Testing and Documentation:** Helped me review features, plan test cases, organize Git commits, and prepare documentation.
 
-I used these suggestions as guidance and reviewed the code to understand how the new features worked with the existing portfolio.
+I reviewed these suggestions to understand how the new functionality worked with the existing portfolio.
 
 ## 2. Benefits & Challenges
 
-One of the main benefits of using ChatGPT was understanding how HTML, CSS, and JavaScript work together to create interactive features. For example, implementing project filtering required adding category attributes in HTML, styling the filter buttons in CSS, and using JavaScript to update the displayed project cards.
+One of the main benefits of using ChatGPT was understanding how HTML, CSS, and JavaScript work together to create interactive features.
 
-AI assistance was also useful when improving the contact form. It helped me understand how to validate different types of user input, display errors for invalid fields, and provide feedback when the user corrects the information.
+For example, project filtering required adding category attributes in HTML, styling buttons in CSS, and using JavaScript to update the visible project cards.
 
-Another benefit was improving code organization. As the project grew, I decided to separate the CSS into three files rather than continuing to add everything to one large stylesheet.
+Adding project search introduced another challenge because searching and filtering needed to work together. AI assistance helped me understand how to combine both conditions in the `updateProjects()` function rather than using separate functions that could interfere with each other.
 
-However, I faced some challenges. Not every AI suggestion was appropriate for the current assignment, and some features would have introduced unnecessary complexity.
+AI was also helpful when improving form validation and user feedback. It helped me understand how to validate different types of input, display errors, and update feedback as the user corrects information.
 
-For example, project search and external API integration were discussed as possible improvements. After comparing the requirements for Assignments 2 and 3, I decided to postpone these features and focus on dynamic content, validation, and user feedback.
+As the project grew, I also reorganized the CSS into separate files to make the code easier to read and maintain.
 
-I also needed to verify that the new code worked correctly with the existing portfolio, including checking stylesheet references and making sure that previously implemented features continued working.
+One challenge was deciding which AI suggestions were appropriate for the assignment. Some suggestions introduced unnecessary complexity, so I reviewed the requirements before deciding what to implement.
+
+I also needed to check that new features worked correctly with existing functionality, including theme switching, form validation, and responsive design.
 
 ## 3. Learning Outcomes
 
-Through this assignment, I improved my understanding of JavaScript and interactive web development.
+Through Assignment 2, I improved my understanding of JavaScript event listeners, DOM manipulation, conditional logic, and dynamic content updates.
 
-I learned how to use event listeners and DOM manipulation to respond to user actions without reloading the page. Project filtering helped me understand how `data-*` attributes and conditional logic can control which elements are displayed.
+I learned how to use HTML `data-*` attributes to categorize project cards and how JavaScript can filter content based on user selections.
 
-I also learned how to implement form validation using string methods, conditional statements, and regular expressions. Adding real-time validation helped me understand how JavaScript can provide immediate feedback and improve the user experience.
+Implementing live project search helped me understand how `toLowerCase()`, `trim()`, and `includes()` can be used to process search input and match text.
 
-Working with animations helped me understand CSS `@keyframes`, transitions, and how small visual effects can make interactions smoother.
+I also learned how to combine multiple conditions using logical operators so that project filtering and searching work together.
 
-I also gained experience organizing CSS into separate files and using accessibility attributes such as `aria-pressed`, `aria-invalid`, and `aria-live` to communicate interface changes.
+Improving the contact form helped me understand regular expressions, input validation, error handling, and real-time feedback.
 
-Overall, this assignment helped me understand how to extend an existing website while keeping its functionality, design, and code structure consistent.
+In addition, I gained experience with CSS animations, transitions, accessibility attributes, and organizing code into separate stylesheets.
+
+Overall, this assignment helped me understand how to extend an existing website while keeping its features consistent and maintainable.
 
 ## 4. Responsible Use & Modifications
 
 I reviewed AI-generated suggestions before including them in the project and tested the implemented features to confirm that they behaved as expected.
 
-For project filtering, I tested the All Projects, Development, and UI/UX Design buttons to verify that the correct project cards were displayed.
+For project filtering, I checked that each category button displayed the correct projects. For project search, I tested different keywords and combinations of search terms and categories.
 
-For the contact form, I tested different input cases, including short names, invalid email addresses, empty messages, and valid submissions. I also checked that error messages disappeared when the input was corrected.
+I also checked the empty-state behavior by searching for keywords that did not match any project and using the Clear Search button to restore the default view.
 
-I made modifications to the suggested implementation based on my preferences and project requirements. For example, I changed the contact form confirmation message to make it shorter and clearer for a demonstration website.
+For the contact form, I tested invalid names, invalid email addresses, empty messages, and valid submissions. I also checked that error messages updated as the input was corrected.
 
-I also decided not to implement every suggested feature. Project search and API integration were postponed because they were not required for Assignment 2 and could be introduced as more advanced functionality in a later assignment.
+I modified suggestions based on my preferences and project requirements. For example, I changed the contact form confirmation message to make it shorter and clearer for a demonstration website.
 
-These decisions helped me use AI responsibly by reviewing its suggestions, understanding the implementation, and selecting features that matched the assignment requirements. ChatGPT supported my learning and problem-solving process, while the final implementation decisions were based on my project goals and testing.
+I initially considered postponing project search to a later assignment, but after reviewing the functionality already implemented, I decided to add it to Assignment 2 as an additional interactive feature.
+
+ChatGPT was used as a supporting tool for explanations, code review, problem-solving, and documentation. I made decisions about which suggestions to include based on the assignment requirements and the results of testing.
