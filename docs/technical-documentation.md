@@ -6,7 +6,7 @@ This project extends the personal portfolio developed in Assignment 1 by adding 
 
 The website is built using HTML, CSS, and JavaScript and contains four main sections: Home, About, Projects, and Contact.
 
-The main improvements introduced in Assignment 2 include interactive project filtering, real-time contact form validation, error and success feedback, and smooth animations.
+The main improvements introduced in Assignment 2 include project filtering and live search, real-time contact form validation, error and success feedback, and smooth animations.
 
 ## 2. Project Structure
 
@@ -40,21 +40,38 @@ The main files have the following responsibilities:
 
 This separation makes the code easier to read, maintain, and extend.
 
-## 3. Dynamic Content — Project Filtering
+## 3. Dynamic Content — Project Filtering and Search
 
-The Projects section includes three filter buttons: All Projects, Development, and UI/UX Design.
+The Projects section includes three filter buttons: All Projects, Development, and UI/UX Design, along with a search field.
 
 Each project card is assigned a category using the HTML `data-category` attribute. The filter buttons use `data-filter` to identify the selected category.
 
-JavaScript listens for button clicks and compares the selected filter with each project's category.
+JavaScript listens for button clicks and search input events to update the displayed projects without reloading the page.
 
-If a project matches the selected category, it remains visible. Otherwise, JavaScript hides it using the `hidden` property.
+The `updateProjects()` function combines two conditions:
 
-The selected button is updated using the `active` class and the `aria-pressed` attribute.
+- **Category filtering:** Checks whether the project matches the selected category.
+- **Text searching:** Uses `toLowerCase()` and `includes()` to check whether the project title or description contains the search keyword.
 
-This feature allows users to explore projects by category without reloading the webpage.
+A project is displayed only when both conditions are satisfied. Otherwise, it is hidden using the `hidden` property.
 
-## 4. Data Handling and State Management
+The selected filter button is updated using the `active` class and `aria-pressed` attribute.
+
+This allows users to search and filter projects together while keeping the interface responsive to their actions.
+
+## 4. Empty-State Feedback
+
+JavaScript counts the number of projects matching the selected category and search keyword.
+
+If no projects match, the website displays a friendly message:
+
+"No projects found. Try another keyword or category."
+
+A Clear Search button allows users to reset both the search input and selected category filter.
+
+This ensures that users receive feedback instead of seeing an empty Projects section without explanation.
+
+## 5. Data Handling and State Management
 
 The website uses JavaScript to handle user interactions and input data.
 
@@ -64,7 +81,7 @@ The contact form also processes user input by reading and trimming field values 
 
 These features demonstrate basic data handling and state management without requiring a backend or external API.
 
-## 5. Contact Form Validation and User Feedback
+## 6. Contact Form Validation and User Feedback
 
 The Contact section includes Name, Email, and Message fields.
 
@@ -84,19 +101,19 @@ When all inputs are valid, a confirmation message is displayed and the form fiel
 
 The form is a demonstration and does not send information to a server.
 
-## 6. Animations and Transitions
+## 7. Animations and Transitions
 
 The website uses CSS transitions and animations to improve the user experience.
 
-Project cards use a short fade-in animation when the selected filter changes. The effect combines opacity and slight vertical movement to make the content update smoothly.
+Project cards use a short fade-in animation when the selected filter or search results change. The effect combines opacity and slight vertical movement to make content updates smoother.
 
 The contact form success message also uses a subtle fade-in effect.
 
 Existing hover effects are applied to project cards, navigation links, buttons, and social icons. Smooth scrolling is used when navigating between sections.
 
-Animations are kept short and subtle to avoid distracting users. The project filtering animation also respects the `prefers-reduced-motion` setting.
+Animations are kept short and subtle to avoid distracting users. The project animation respects the `prefers-reduced-motion` setting.
 
-## 7. Responsive Design
+## 8. Responsive Design
 
 The website uses CSS Grid and Flexbox to organize content across different screen sizes.
 
@@ -107,41 +124,45 @@ Two main responsive breakpoints are used:
 
 The responsive rules are organized in `responsive.css`, keeping them separate from the main design and interactive component styles.
 
-## 8. Accessibility and Code Quality
+## 9. Accessibility and Code Quality
 
 The website uses semantic HTML elements, descriptive image alternative text, and labels connected to form fields.
 
 Accessibility attributes such as `aria-label`, `aria-describedby`, `aria-invalid`, `aria-live`, and `aria-pressed` are used to improve communication with assistive technologies.
 
-The JavaScript code is organized into sections for form validation, theme switching, and project filtering.
+The JavaScript code is organized into sections for form validation, theme switching, and project filtering/search.
 
 CSS variables are used to maintain consistent colors, and comments identify important parts of the implementation.
 
-## 9. Testing and Verification
+## 10. Testing and Verification
 
-The following tests were performed during development:
+The following tests should be completed before submission:
 
 | Feature | Test | Expected Result |
 |---|---|---|
 | Project Filtering | Select Development | Only RouteRepair is displayed |
 | Project Filtering | Select UI/UX Design | Only KFUPM StudyVerse is displayed |
 | Project Filtering | Select All Projects | Both project cards are displayed |
-| Form Validation | Enter a one-character name | An error message appears |
-| Form Validation | Enter an invalid email | Email validation error appears |
-| Form Validation | Leave the message empty | Message validation error appears |
+| Project Search | Search for "Route" | Only RouteRepair is displayed |
+| Project Search | Search for "Study" | Only KFUPM StudyVerse is displayed |
+| Project Search | Search for "networking" | RouteRepair is displayed |
+| Empty State | Search for "xyz123" | No projects found message appears |
+| Combined Filtering | Select Development and search for "Study" | Empty-state feedback appears |
+| Clear Search | Click Clear Search | Search and category filter are reset |
+| Form Validation | Enter invalid input | Relevant error messages appear |
 | Real-time Feedback | Correct invalid input | The corresponding error disappears |
 | Invalid Submission | Submit incomplete information | General error feedback appears |
 | Valid Submission | Submit valid information | Confirmation appears and fields reset |
 | Theme Toggle | Switch theme and refresh | Saved theme preference is restored |
 | Responsive Design | Resize browser window | Layout adjusts to screen width |
 
-The testing process helped verify that the new features worked correctly and did not interfere with the functionality carried over from Assignment 1.
+These tests help verify that the new features work correctly and do not interfere with the functionality carried over from Assignment 1.
 
-## 10. Improvements from Assignment 1
+## 11. Improvements from Assignment 1
 
 Assignment 1 focused on building the initial responsive portfolio with basic JavaScript interactions.
 
-Assignment 2 extends this foundation by introducing project filtering, more detailed form validation, real-time user feedback, and additional animations.
+Assignment 2 extends this foundation by introducing project filtering, live project search, empty-state feedback, more detailed form validation, real-time user feedback, and additional animations.
 
 The CSS was also reorganized into separate stylesheets to make future development and maintenance easier.
 
