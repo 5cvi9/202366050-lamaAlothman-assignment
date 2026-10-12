@@ -50,7 +50,7 @@ assignment-2/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/5cvi9/202366050-lamaalothman-assignment2.git
+git clone https://github.com/5cvi9/202366050-lamaAlothman-assignment2.git
 ```
 
 2. Open the project folder.
