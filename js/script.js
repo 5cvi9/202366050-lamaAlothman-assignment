@@ -169,6 +169,14 @@ filterButtons.forEach(function (button) {
                 card.dataset.category === selectedFilter;
 
             card.hidden = !matches;
+
+            // Restart the animation for visible cards
+            card.classList.remove("animate__animate");
+
+            if(matches){
+                void card.offsetWidth; // Trigger reflow
+                card.classList.add("animate__animate");
+            }
         });
 
     });

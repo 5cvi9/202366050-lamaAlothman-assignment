@@ -56,3 +56,52 @@ form .input-error:focus {
     outline: 2px solid #b42318;
     outline-offset: 2px;
 }
+/* PROJECT FILTER ANIMATION*/
+
+/* Smoothly reveal projects after filtering */
+.project-card.filter-animate {
+    animation: projectFadeIn 0.35s ease-out both;
+}
+
+@keyframes projectFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .project-card.filter-animate {
+        animation: none;
+    }
+}
+/* FORM FEEDBACK ANIMATION */
+
+#form-message.success-message {
+    animation: feedbackFadeIn 0.35s ease-out;
+}
+
+@keyframes feedbackFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Respect reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    #form-message.success-message {
+        animation: none;
+    }
+}
