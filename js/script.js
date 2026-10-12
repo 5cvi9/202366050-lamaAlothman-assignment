@@ -1,20 +1,94 @@
-// CONTACT FORM
+// ========================================
+// CONTACT FORM VALIDATION
+// ========================================
 
-
-// Get the contact form and the message area
 const form = document.getElementById("contact-form");
 const message = document.getElementById("form-message");
 
-// Handle the form submission without reloading the page
+const nameInput = document.getElementById("name");
+const emailInput = document.getElementById("email");
+const messageInput = document.getElementById("message");
+
+// Display or clear an error for a specific field
+function showError(input, errorId, errorText) {
+    const errorElement = document.getElementById(errorId);
+
+    errorElement.textContent = errorText;
+    input.classList.toggle("input-error", Boolean(errorText));
+    input.setAttribute("aria-invalid", String(Boolean(errorText)));
+}
+
+// Validate the form when the user submits it
 form.addEventListener("submit", function (event) {
     event.preventDefault();
 
-   
-    message.textContent =
-        "Thank you! Your message has been received.";
+    const name = nameInput.value.trim();
+    const email = emailInput.value.trim();
+    const userMessage = messageInput.value.trim();
 
-   
-    form.reset();
+    let isValid = true;
+
+    // Validate name
+    if (name.length < 2) {
+        showError(nameInput, "name-error", "Please enter at least 2 characters.");
+        isValid = false;
+    } else {
+        showError(nameInput, "name-error", "");
+    }
+
+    // Validate email
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        showError(emailInput, "email-error", "Please enter a valid email address.");
+        isValid = false;
+    } else {
+        showError(emailInput, "email-error", "");
+    }
+
+    // Validate message
+    if (userMessage.length === 0) {
+        showError(messageInput, "message-error", "Please enter a message.");
+        isValid = false;
+    } else {
+        showError(messageInput, "message-error", "");
+    }
+
+    if (isValid) {
+        message.textContent =
+            "Your message is ready! This form is for demonstration only.";
+
+        message.classList.add("success-message");
+
+        form.reset();
+
+        // Reset validation state after a successful submission
+        [nameInput, emailInput, messageInput].forEach(function (input) {
+            input.classList.remove("input-error");
+            input.removeAttribute("aria-invalid");
+        });
+    } else {
+        message.textContent = "";
+        message.classList.remove("success-message");
+
+        // Focus on the first invalid field
+        const firstInvalid = form.querySelector(".input-error");
+
+        if (firstInvalid) {
+            firstInvalid.focus();
+        }
+    }
+});
+
+// Clear feedback when the user edits a field
+[nameInput, emailInput, messageInput].forEach(function (input) {
+    input.addEventListener("input", function () {
+        const errorId = input.id + "-error";
+
+        showError(input, errorId, "");
+        message.textContent = "";
+        message.classList.remove("success-message");
+    });
 });
 
 // DARK / LIGHT MODE
