@@ -1,14 +1,17 @@
 # Personal Portfolio — Assignment 2
 
-This project is an interactive personal portfolio website developed for Assignment 2 of the Web Engineering course (SWE 363) at KFUPM. It builds on Assignment 1 by introducing dynamic content, improved form validation, animations, and better user feedback.
+This project is an interactive personal portfolio website developed for Assignment 2 of the Web Engineering course (SWE 363) at KFUPM. It builds on Assignment 1 by introducing dynamic content, project search and filtering, improved form validation, animations, and better user feedback.
 
 ## Features
 
 - Home and About Me sections
 - Projects section featuring RouteRepair and KFUPM StudyVerse
 - Interactive project filtering by category
+- Live project search by title or description
+- Combined search and category filtering
+- Empty-state feedback with a Clear Search button
 - Contact form with real-time input validation
-- Error messages and confirmation feedback
+- Field-specific error messages and confirmation feedback
 - Smooth project filtering animations and hover effects
 - Dark/light theme toggle with localStorage
 - Responsive design for desktop, tablet, and mobile
