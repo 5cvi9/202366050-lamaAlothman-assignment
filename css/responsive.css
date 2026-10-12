@@ -1,0 +1,87 @@
+/* RESPONSIVE DESIGN */
+/* Tablet and smaller screens:
+ Stack project cards and contact content into one column
+*/
+
+@media (max-width: 800px) {
+
+    .projects-grid,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .contact-container {
+        gap: 40px;
+    }
+}
+
+/* Mobile screens:
+   Reduce spacing and font sizes to fit smaller displays */
+@media (max-width: 550px) {
+
+    #theme-toggle {
+        width: 31px;
+        height: 31px;
+        font-size: 0.95rem;
+    }
+    html {
+        scroll-padding-top: 120px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+
+    nav {
+        padding: 12px 18px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .logo {
+        font-size: 1.15rem;
+    }
+
+    nav ul {
+        gap: 2px;
+    }
+
+    nav ul a {
+        padding: 6px 7px;
+        font-size: 0.8rem;
+    }
+        /* Adjust hero text for mobile screens */
+    .hero h1 { 
+        font-size: 2.8rem;
+    }
+
+    .hero h2 {
+        font-size: 1.15rem;
+    }
+
+    .tagline {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+
+    .project-image {
+        height: 210px;
+    }
+
+    .contact-container {
+        gap: 35px;
+    }
+
+    .contact-info h2 {
+        font-size: 2.2rem;
+    }
+
+    form {
+        padding: 20px;
+    }
+}
