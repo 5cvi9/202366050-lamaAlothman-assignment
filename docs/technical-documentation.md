@@ -1,3 +1,4 @@
+
 # Technical Documentation — Assignment 2
 
 ## 1. Project Overview
