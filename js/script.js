@@ -182,18 +182,66 @@ themeToggle.addEventListener("click", function () {
 
     updateThemeButton();
 });
-// PROJECT FILTERING
+
+// PROJECT FILTERING AND SEARCH
+
 
 const filterButtons = document.querySelectorAll(".filter-btn");
 const projectCards = document.querySelectorAll(".project-card");
 
+const projectSearch = document.getElementById("project-search");
+const noProjects = document.getElementById("no-projects");
+const clearSearch = document.getElementById("clear-search");
+
+let currentFilter = "all";
+
+// Show projects matching both the category and search keyword
+function updateProjects() {
+    const searchText = projectSearch.value.trim().toLowerCase();
+    let visibleCount = 0;
+
+    projectCards.forEach(function (card) {
+
+        const matchesCategory =
+            currentFilter === "all" ||
+            card.dataset.category === currentFilter;
+
+        // Search within project title and description
+        const projectTitle = card.querySelector("h3").textContent;
+        const projectDescription = card.querySelector("p").textContent;
+
+        const projectText =
+            (projectTitle + " " + projectDescription).toLowerCase();
+
+        const matchesSearch = projectText.includes(searchText);
+
+        const shouldShow = matchesCategory && matchesSearch;
+
+        // Show or hide the project
+        card.hidden = !shouldShow;
+
+        // Restart the fade-in animation
+        card.classList.remove("filter-animate");
+
+        if (shouldShow) {
+            visibleCount++;
+
+            void card.offsetWidth;
+            card.classList.add("filter-animate");
+        }
+    });
+
+    // Display feedback if no projects match
+    noProjects.hidden = visibleCount !== 0;
+}
+
+// Handle category filter buttons
 filterButtons.forEach(function (button) {
 
     button.addEventListener("click", function () {
+        currentFilter = button.dataset.filter;
 
-        const selectedFilter = button.dataset.filter;
-
-        // Update the active filter button
+        // Update the active button
         filterButtons.forEach(function (btn) {
             const isActive = btn === button;
 
@@ -201,23 +249,29 @@ filterButtons.forEach(function (button) {
             btn.setAttribute("aria-pressed", String(isActive));
         });
 
-        // Show or hide projects based on category
-        projectCards.forEach(function (card) {
-
-            const matches =
-                selectedFilter === "all" ||
-                card.dataset.category === selectedFilter;
-
-            card.hidden = !matches;
-
-            // Restart the fade-in animation for visible projects
-            card.classList.remove("filter-animate");
-
-            if (matches) {
-                void card.offsetWidth;
-                card.classList.add("filter-animate");
-            }
-        });
-
+        updateProjects();
     });
 });
+
+// Search projects as the user types
+projectSearch.addEventListener("input", updateProjects);
+
+// Reset both search and category filter
+clearSearch.addEventListener("click", function () {
+
+    projectSearch.value = "";
+    currentFilter = "all";
+
+    filterButtons.forEach(function (btn) {
+        const isActive = btn.dataset.filter === "all";
+
+        btn.classList.toggle("active", isActive);
+        btn.setAttribute("aria-pressed", String(isActive));
+    });
+
+    updateProjects();
+    projectSearch.focus();
+});
+
+// Display all projects when the page loads
+updateProjects();

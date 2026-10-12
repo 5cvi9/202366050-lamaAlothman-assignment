@@ -130,10 +130,21 @@
                 </button>
 
             </div>
+            <!-- Project Search -->
+            <div class="project-search">
 
+                <label for="project-search">
+                    Search Projects
+                </label>
+
+                <input type="search" id="project-search" placeholder="Search by project name or keyword..."
+                    autocomplete="off">
+
+            </div>
 
 
             <div class="projects-grid">
+
 
                 <!-- RouteRepair -->
                 <article class="project-card" data-category="development">
@@ -206,6 +217,14 @@
                 </article>
 
             </div>
+            <!-- Empty State Feedback -->
+            <div id="no-projects" class="empty-state" role="status" hidden>
+                <p>No projects found. Try another keyword or category.</p>
+
+                <button id="clear-search" type="button">
+                    Clear Search
+                </button>
+            </div>
 
         </section>
         <!--  CONTACT-->
@@ -251,7 +270,7 @@
 
 
                 <!-- Contact Form -->
-             
+
                 <form id="contact-form" novalidate>
 
                     <label for="name">Name</label>
