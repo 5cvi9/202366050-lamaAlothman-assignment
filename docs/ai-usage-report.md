@@ -1,53 +1,58 @@
-# AI Usage Report
+# AI Usage Report — Assignment 2
 
-## Tools Used & Use Cases
+## 1. Tools Used & Use Cases
 
-I used ChatGPT as an AI-assisted tool while developing my personal portfolio. I used it to review parts of my HTML, CSS, and JavaScript, explain concepts that I wanted to understand better, and suggest improvements to the organization and design of the website.
+I used ChatGPT as an AI-assisted development tool while improving my personal portfolio for Assignment 2. My main goal was to understand how to introduce more interactive features while maintaining the structure and design developed in Assignment 1.
 
-ChatGPT was also used to support responsive design, code comments, Git commit organization, and project documentation. For responsive design, it helped me understand how media queries and breakpoints could be used to adjust the layout for tablet and mobile screens.
+ChatGPT supported several parts of the development process:
 
-I also used AI-assisted code review near the end of development to identify possible UI and code-quality issues. For example, the GitHub icon in the Contact section was reviewed and updated so that the same image asset could be reused and remain visible in both dark and light modes.
+- **Dynamic Content:** Helped me understand and implement project filtering using JavaScript event listeners and HTML `data-category` attributes.
+- **Form Validation:** Provided explanations and suggestions for validating user input, displaying field-specific error messages, and updating feedback while users type.
+- **Animations and Transitions:** Helped me implement subtle fade-in animations for project cards and form feedback without making the website distracting.
+- **Code Organization:** Assisted with separating the original CSS file into `styles.css`, `components.css`, and `responsive.css` to improve readability and maintainability.
+- **Code Review and Testing:** Helped me identify possible implementation issues and plan tests for the new interactive features.
+- **Documentation and Git:** Provided guidance on meaningful commits and organizing the README and technical documentation.
 
-AI was also used to help organize the README, technical documentation, and this AI usage report. I reviewed the suggested documentation and adjusted it to describe the features that were actually implemented in my project.
+I used these suggestions as guidance and reviewed the code to understand how the new features worked with the existing portfolio.
 
-## Benefits & Challenges
+## 2. Benefits & Challenges
 
-One of the main benefits of using ChatGPT was receiving explanations while working on the project. It helped me understand HTML structure, CSS Grid and Flexbox, responsive design, JavaScript event handling, and localStorage more clearly.
+One of the main benefits of using ChatGPT was understanding how HTML, CSS, and JavaScript work together to create interactive features. For example, implementing project filtering required adding category attributes in HTML, styling the filter buttons in CSS, and using JavaScript to update the displayed project cards.
 
-It was also useful during code review because it helped me notice areas that could be improved, such as responsive behavior, code organization, comments, and consistency between different parts of the website.
+AI assistance was also useful when improving the contact form. It helped me understand how to validate different types of user input, display errors for invalid fields, and provide feedback when the user corrects the information.
 
-Another benefit was help with organizing the development process. I learned how meaningful Git commits can represent different stages of development instead of putting all changes into one large commit.
+Another benefit was improving code organization. As the project grew, I decided to separate the CSS into three files rather than continuing to add everything to one large stylesheet.
 
-However, not every AI suggestion was necessary or suitable for my portfolio. I needed to review each suggestion and decide whether it matched the assignment requirements and the design I wanted.
+However, I faced some challenges. Not every AI suggestion was appropriate for the current assignment, and some features would have introduced unnecessary complexity.
 
-For example, AI suggested adding an active navigation feature that would highlight the current section while scrolling. After reviewing the assignment requirements, I decided not to include it because the portfolio already met the interactivity requirement and I wanted to keep the project simple.
+For example, project search and external API integration were discussed as possible improvements. After comparing the requirements for Assignments 2 and 3, I decided to postpone these features and focus on dynamic content, validation, and user feedback.
 
-This showed me that AI suggestions should be treated as options rather than instructions that must always be followed.
+I also needed to verify that the new code worked correctly with the existing portfolio, including checking stylesheet references and making sure that previously implemented features continued working.
 
-## Learning Outcomes
+## 3. Learning Outcomes
 
-Using AI during this assignment helped me improve my understanding of several web development concepts.
+Through this assignment, I improved my understanding of JavaScript and interactive web development.
 
-I gained a better understanding of how semantic HTML elements can organize a webpage and how CSS Grid and Flexbox can be used for different types of layouts.
+I learned how to use event listeners and DOM manipulation to respond to user actions without reloading the page. Project filtering helped me understand how `data-*` attributes and conditional logic can control which elements are displayed.
 
-I also learned more about responsive design and how media queries can change layouts, spacing, and font sizes depending on the available screen width.
+I also learned how to implement form validation using string methods, conditional statements, and regular expressions. Adding real-time validation helped me understand how JavaScript can provide immediate feedback and improve the user experience.
 
-For JavaScript, I improved my understanding of event listeners and `preventDefault()` through the contact form. I also learned how `classList.toggle()` can be used to change a page state and how `localStorage` can preserve a user's theme preference after refreshing the browser.
+Working with animations helped me understand CSS `@keyframes`, transitions, and how small visual effects can make interactions smoother.
 
-In addition, I gained more experience using Git and learned how meaningful commits can document the development process in a clearer way.
+I also gained experience organizing CSS into separate files and using accessibility attributes such as `aria-pressed`, `aria-invalid`, and `aria-live` to communicate interface changes.
 
-Most importantly, I learned that AI-generated suggestions still need to be understood, reviewed, and tested before they are included in a project.
+Overall, this assignment helped me understand how to extend an existing website while keeping its functionality, design, and code structure consistent.
 
-## Responsible Use & Modifications
+## 4. Responsible Use & Modifications
 
-I reviewed AI-generated suggestions before using them and did not automatically include every recommendation. I checked whether suggestions matched the assignment requirements, modified them when necessary, and tested the resulting features in the website.
+I reviewed AI-generated suggestions before including them in the project and tested the implemented features to confirm that they behaved as expected.
 
-One example was the StudyVerse project information. Figma was initially considered under technologies, but after reviewing the description, I changed it to "Design Tool" because that more accurately describes how Figma was used in the project.
+For project filtering, I tested the All Projects, Development, and UI/UX Design buttons to verify that the correct project cards were displayed.
 
-Another example was the optional active navigation feature. Although the feature was suggested, I chose not to include it because it was not necessary for the assignment.
+For the contact form, I tested different input cases, including short names, invalid email addresses, empty messages, and valid submissions. I also checked that error messages disappeared when the input was corrected.
 
-During final code review, I also modified the GitHub icon implementation in the Contact section. Instead of keeping a separate image for the same purpose, I reused the GitHub asset and adjusted the CSS so that the icon remained visible in both dark and light themes.
+I made modifications to the suggested implementation based on my preferences and project requirements. For example, I changed the contact form confirmation message to make it shorter and clearer for a demonstration website.
 
-I tested the contact form, theme toggle, responsive layouts, links, and visual changes before considering the project complete.
+I also decided not to implement every suggested feature. Project search and API integration were postponed because they were not required for Assignment 2 and could be introduced as more advanced functionality in a later assignment.
 
-Overall, I used ChatGPT as a supporting tool for explanations, review, problem-solving, and documentation while making the final decisions about what was included in the portfolio.
+These decisions helped me use AI responsibly by reviewing its suggestions, understanding the implementation, and selecting features that matched the assignment requirements. ChatGPT supported my learning and problem-solving process, while the final implementation decisions were based on my project goals and testing.
