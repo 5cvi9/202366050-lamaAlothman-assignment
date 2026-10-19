@@ -1,5 +1,33 @@
-
 # AI Usage Report — Assignment 2
+
+## AI Usage Log
+
+The following log summarizes how ChatGPT (GPT-6) assisted with Assignment 2 development on October 12, 2026, with an additional documentation update on October 19, 2026.
+
+| ID | Tool (model) | Date | Purpose | Files affected | What I changed and how I verified it |
+|---|---|---|---|---|---|
+| A01 | ChatGPT (GPT-6) | 2026-10-12 | Assignment planning and requirements review | Project planning, `README.md` | Reviewed the requirements for Assignments 2 and 3 and selected features appropriate for Assignment 2. |
+| A02 | ChatGPT (GPT-6) | 2026-10-12 | Project filtering and dynamic content | `index.html`, `css/components.css`, `js/script.js` | Added category attributes and filter buttons. Tested that Development, UI/UX Design, and All Projects displayed the correct cards. |
+| A03 | ChatGPT (GPT-6) | 2026-10-12 | CSS organization and responsive design | `index.html`, `css/styles.css`, `css/components.css`, `css/responsive.css` | Separated styles into three CSS files and checked the stylesheet references and layout. |
+| A04 | ChatGPT (GPT-6) | 2026-10-12 | Contact form validation and feedback | `index.html`, `css/components.css`, `js/script.js` | Implemented validation rules, error messages, and success feedback. Tested invalid and valid submissions. |
+| A05 | ChatGPT (GPT-6) | 2026-10-12 | Real-time validation | `css/components.css`, `js/script.js` | Added validation during input events. Tested that errors appeared for invalid values and disappeared after correction. |
+| A06 | ChatGPT (GPT-6) | 2026-10-12 | Animations and debugging | `css/components.css`, `js/script.js` | Added fade-in effects and corrected the animation class mismatch from `animate__animate` to `filter-animate`. |
+| A07 | ChatGPT (GPT-6) | 2026-10-12 | Project search and empty-state feedback | `index.html`, `css/components.css`, `js/script.js` | Combined searching with category filtering and added an empty-state message and reset button. |
+| A08 | ChatGPT (GPT-6) | 2026-10-12 | Documentation and code review | `README.md`, `docs/technical-documentation.md`, `docs/ai-usage-report.md` | Revised the documentation to describe the implemented features and reviewed it against the assignment rubric. |
+| A09 | ChatGPT (GPT-6) | 2026-10-12 | Full-page dark mode improvement | `css/styles.css`, `css/components.css` | Extended dark-mode styling to additional sections and components. |
+| A10 | ChatGPT (GPT-6) | 2026-10-19 | AI usage declaration and reporting | `docs/ai-usage-report.md` | Prepared the usage log and declaration based on the assignment instructions. |
+
+
+## AI Usage Declaration
+
+I declare that this report and the attached evidence document all of my AI use in this assignment, with complete and unedited conversations, and that I understand and can explain all the code I submitted. I understand that undeclared AI use or a false declaration will be treated as plagiarism according to KFUPM regulations.
+
+**Name:** Lama Alothman  
+**Student ID:** 202366050  
+**Date:** 2026-10-19  
+**Signature:** Lama Alothman
+
+---
 
 ## 1. Tools Used & Use Cases
 
