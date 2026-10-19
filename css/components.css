@@ -183,3 +183,13 @@ form textarea {
 .empty-state button:hover {
     background: var(--green);
 }
+/* DARK MODE FILTER BUTTONS */
+
+body:not(.light-mode) .filter-btn.active,
+body:not(.light-mode) .filter-btn:hover {
+    color: #10232c;
+}
+
+body:not(.light-mode) .empty-state button {
+    color: #10232c;
+}
