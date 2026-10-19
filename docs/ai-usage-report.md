@@ -32,7 +32,6 @@ I declare that this report and the attached evidence document all of my AI use i
 
 The following table summarizes the Git commits made during Assignment 2. ChatGPT (GPT-6) was used to assist with code suggestions, debugging, explanations, documentation, and Git workflow guidance. The changes were reviewed and tested during development.
 
-The commands below show the corresponding Git commit commands. They are included for documentation and do not necessarily represent the exact commands originally typed in the terminal.
 
 | ID | Date | Git Commit Message | AI Tool (Model) | AI Assistance |
 |---|---|---|---|---|
