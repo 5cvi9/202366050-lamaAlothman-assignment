@@ -31,64 +31,136 @@ I declare that this report and the attached evidence document all of my AI use i
 
 ## 1. Tools Used & Use Cases
 
-I used ChatGPT as an AI-assisted development tool while improving my personal portfolio for Assignment 2. My goal was to introduce interactive features while maintaining the design and structure developed in Assignment 1.
+I used ChatGPT (GPT-6) as an AI-assisted development tool throughout Assignment 2 to help me improve my personal portfolio website. Since this assignment builds on Assignment 1, my main goal was to introduce new interactive features while keeping the existing website structure, visual design, and functionality consistent.
 
-ChatGPT supported several parts of the development process:
+I used ChatGPT for explanations, code suggestions, debugging, code review, testing guidance, and documentation. The main use cases were:
 
-- **Dynamic Content:** Helped me implement project filtering using JavaScript event listeners and HTML data attributes.
-- **Project Search:** Provided guidance on adding live search and combining it with category filtering through a shared JavaScript function.
-- **Error Handling:** Helped me implement empty-state feedback and a Clear Search button when no projects match.
-- **Form Validation:** Provided explanations and suggestions for validating user input and displaying real-time error messages.
-- **Animations:** Helped me implement subtle fade-in effects for project cards and form feedback.
-- **Code Organization:** Assisted with separating the original CSS into three files for better maintainability.
-- **Testing and Documentation:** Helped me review features, plan test cases, organize Git commits, and prepare documentation.
+- **Dynamic Content and Project Filtering:** ChatGPT helped me understand how to implement interactive project filtering using HTML `data-category` and `data-filter` attributes, JavaScript event listeners, and DOM manipulation. The feature allows visitors to display all projects or select a specific category without reloading the page.
 
-I reviewed these suggestions to understand how the new functionality worked with the existing portfolio.
+- **Live Project Search:** I used ChatGPT to help implement a search field that filters projects as the user types. It also helped me understand how to combine search functionality with the existing category filters using the `updateProjects()` function, allowing both features to work together.
+
+- **Error Handling and User Feedback:** ChatGPT provided suggestions for handling situations where no projects match the selected category or search keyword. This led to the implementation of an empty-state message and a Clear Search button that allows users to return to the default project view.
+
+- **Contact Form Validation:** ChatGPT helped me improve the contact form by adding validation for the name, email, and message fields. It also assisted with implementing real-time validation, field-specific error messages, visual error indicators, and confirmation feedback.
+
+- **Animations and Transitions:** I used ChatGPT to explore simple CSS animations that could improve the user experience without making the website distracting. This included fade-in animations for project cards and form feedback, as well as reviewing the interaction between JavaScript classes and CSS selectors.
+
+- **Dark and Light Mode:** ChatGPT helped me review the existing theme toggle and explore improvements to make the theme more consistent across different sections of the portfolio, including navigation, project cards, and form elements.
+
+- **Code Organization:** As the website became more interactive, the original CSS file became longer. ChatGPT assisted me in organizing the styles into three files: `styles.css` for the main design, `components.css` for interactive components, and `responsive.css` for media queries.
+
+- **Code Review, Testing, and Documentation:** I used ChatGPT to review code, identify possible issues, understand Git commands, plan meaningful commits, and prepare the README, technical documentation, and AI usage report.
+
+I reviewed the suggested solutions and considered whether they matched the assignment requirements and the design of my portfolio before including them.
 
 ## 2. Benefits & Challenges
 
-One of the main benefits of using ChatGPT was understanding how HTML, CSS, and JavaScript work together to create interactive features.
+Using ChatGPT during Assignment 2 helped me understand the implementation of interactive web features and made it easier to approach problems step by step.
 
-For example, project filtering required adding category attributes in HTML, styling buttons in CSS, and using JavaScript to update the visible project cards.
+One of the main benefits was receiving explanations about how HTML, CSS, and JavaScript work together. For example, implementing project filtering involved defining categories in HTML, designing interactive buttons in CSS, and writing JavaScript logic to show or hide project cards. ChatGPT helped me understand the purpose of each part and how they connect.
 
-Adding project search introduced another challenge because searching and filtering needed to work together. AI assistance helped me understand how to combine both conditions in the `updateProjects()` function rather than using separate functions that could interfere with each other.
+Another benefit was improving my problem-solving process. When I added project search, I needed to make sure that searching and category filtering worked together correctly. Rather than treating them as completely separate features, I used a shared `updateProjects()` function that checks both conditions before deciding which project cards to display. This helped keep the logic organized and avoid conflicting behavior.
 
-AI was also helpful when improving form validation and user feedback. It helped me understand how to validate different types of input, display errors, and update feedback as the user corrects information.
+AI assistance was also useful for improving user feedback. In Assignment 1, the contact form only displayed a simple confirmation message. In Assignment 2, I improved it by adding field-specific validation, real-time feedback, and a general error message for invalid submissions. ChatGPT helped explain how to use event listeners, conditional statements, and input values to implement these improvements.
 
-As the project grew, I also reorganized the CSS into separate files to make the code easier to read and maintain.
+However, using AI also introduced challenges.
 
-One challenge was deciding which AI suggestions were appropriate for the assignment. Some suggestions introduced unnecessary complexity, so I reviewed the requirements before deciding what to implement.
+One challenge was that AI-generated suggestions did not always match the existing code. For example, during the implementation of project animations, the JavaScript class name did not match the CSS selector. The JavaScript used `animate__animate`, while the CSS expected `filter-animate`. After reviewing the code, I corrected the mismatch so the animation could work properly.
 
-I also needed to check that new features worked correctly with existing functionality, including theme switching, form validation, and responsive design.
+Another challenge was deciding which features were necessary. ChatGPT suggested different possibilities, including additional interactive features and API integration. I compared these suggestions with the requirements of Assignments 2 and 3 before deciding which features to implement.
+
+Maintaining consistency was also important. As I introduced new components and separated the CSS into multiple files, I needed to make sure the original navigation, theme toggle, project layout, and contact form continued working correctly.
+
+These challenges helped me understand that AI-generated code should not be accepted automatically. It is important to review suggestions, identify possible problems, and test the results.
 
 ## 3. Learning Outcomes
 
-Through Assignment 2, I improved my understanding of JavaScript event listeners, DOM manipulation, conditional logic, and dynamic content updates.
+Through Assignment 2 and the use of ChatGPT, I improved my understanding of several web development concepts and gained more experience extending an existing website.
 
-I learned how to use HTML `data-*` attributes to categorize project cards and how JavaScript can filter content based on user selections.
+**JavaScript and DOM Manipulation**
 
-Implementing live project search helped me understand how `toLowerCase()`, `trim()`, and `includes()` can be used to process search input and match text.
+I learned how JavaScript can respond to user interactions and update webpage content without requiring a page reload. Through project filtering, I practiced using event listeners, selecting HTML elements, reading custom data attributes, and changing element visibility.
 
-I also learned how to combine multiple conditions using logical operators so that project filtering and searching work together.
+**Search Functionality and Conditional Logic**
 
-Improving the contact form helped me understand regular expressions, input validation, error handling, and real-time feedback.
+Implementing live project search helped me understand how JavaScript string methods such as `trim()`, `toLowerCase()`, and `includes()` can be used to process user input and compare it with existing content.
 
-In addition, I gained experience with CSS animations, transitions, accessibility attributes, and organizing code into separate stylesheets.
+I also learned how logical operators can combine multiple conditions. In my project, a card is displayed only when it matches both the selected category and the search keyword. This helped me understand how multiple interactive features can share the same logic.
 
-Overall, this assignment helped me understand how to extend an existing website while keeping its features consistent and maintainable.
+**Form Validation and User Feedback**
+
+I gained a better understanding of validating user input before processing a form. I learned how to use regular expressions for basic email validation, check string lengths, and prevent whitespace-only input.
+
+I also learned the difference between validation during form submission and real-time validation while the user types. Providing immediate feedback makes it easier for visitors to identify and correct mistakes.
+
+**CSS Animations and Responsive Design**
+
+Working with CSS animations helped me understand how `@keyframes`, opacity, transforms, and transitions can create smoother interactions.
+
+I also improved my understanding of responsive layouts and the role of media queries in adjusting a website for different screen sizes.
+
+**Theme Management and Local Storage**
+
+I developed a better understanding of how JavaScript and CSS work together to manage dark and light themes. I also reviewed how `localStorage` can save a user's selected preference and restore it after refreshing the page.
+
+**Code Organization and Development Workflow**
+
+Separating the CSS into multiple files helped me understand the importance of organizing code based on responsibility. This makes the project easier to maintain and extend as new features are introduced.
+
+I also gained more experience using Git commands, writing meaningful commit messages, and testing changes before pushing them to GitHub.
+
+Overall, the most important lesson I learned was how to build on an existing project while maintaining its structure and functionality. I also became more aware of the importance of understanding and testing AI-generated suggestions instead of relying on them without review.
 
 ## 4. Responsible Use & Modifications
 
-I reviewed AI-generated suggestions before including them in the project and tested the implemented features to confirm that they behaved as expected.
+I used ChatGPT as a supporting tool during Assignment 2 and reviewed the suggested code and explanations before including them in my project. I focused on understanding how the features worked and checking whether they were appropriate for the assignment.
 
-For project filtering, I checked that each category button displayed the correct projects. For project search, I tested different keywords and combinations of search terms and categories.
+I made several decisions and modifications during development.
 
-I also checked the empty-state behavior by searching for keywords that did not match any project and using the Clear Search button to restore the default view.
+**Project Filtering and Search**
 
-For the contact form, I tested invalid names, invalid email addresses, empty messages, and valid submissions. I also checked that error messages updated as the input was corrected.
+I tested the project filtering buttons to confirm that each category displayed the correct project cards. After adding live search, I checked that searching and filtering worked together.
 
-I modified suggestions based on my preferences and project requirements. For example, I changed the contact form confirmation message to make it shorter and clearer for a demonstration website.
+I also tested the empty-state behavior by entering keywords that did not match any project. The Clear Search button was included to help users return to the default view instead of leaving the Projects section empty.
 
-I initially considered postponing project search to a later assignment, but after reviewing the functionality already implemented, I decided to add it to Assignment 2 as an additional interactive feature.
+**Contact Form Validation**
 
-ChatGPT was used as a supporting tool for explanations, code review, problem-solving, and documentation. I made decisions about which suggestions to include based on the assignment requirements and the results of testing.
+I reviewed and tested the contact form validation using different inputs, including a one-character name, invalid email addresses, empty messages, and valid information.
+
+I also tested the real-time feedback to confirm that error messages appeared for invalid inputs and disappeared after the user corrected them.
+
+One modification I made was changing the confirmation message to:
+
+"Your message is ready! This form is for demonstration only."
+
+I preferred this message because it is shorter and makes it clear that the form does not send an actual email.
+
+**Animation Debugging**
+
+During code review, I identified a mismatch between the JavaScript class used to trigger the project animation and the corresponding CSS selector.
+
+I corrected the class name from `animate__animate` to `filter-animate` so that the JavaScript and CSS referred to the same animation class.
+
+This was an example of reviewing and correcting an implementation issue instead of assuming that the suggested code was already correct.
+
+**Code Organization and Theme Improvements**
+
+I organized the CSS into separate files to make the code easier to read and maintain. I also reviewed the theme styling to improve consistency between the different sections and interactive components.
+
+These changes were intended to improve maintainability and the user experience while preserving the original portfolio design.
+
+**Feature Selection and Assignment Requirements**
+
+I did not implement every feature suggested during the development process.
+
+For example, I initially considered postponing project search to Assignment 3. However, after reviewing the requirements, I decided to include it in Assignment 2 because live search was an appropriate example of dynamic content and improved the Projects section.
+
+I also decided not to add external API integration at this stage because it is a major requirement of Assignment 3, where it can be implemented and documented as a separate improvement.
+
+**Testing and Verification**
+
+Throughout development, I checked the behavior of the new features using different inputs and user interactions. This included project filtering, searching, empty-state feedback, form validation, and theme switching.
+
+I also reviewed the documentation to make sure it described the features implemented in the project.
+
+Overall, I used ChatGPT to support learning, problem-solving, debugging, and documentation. I reviewed and adapted its suggestions based on the assignment requirements, my design preferences, and the results of testing. This helped me maintain responsibility for the final implementation and develop a better understanding of the code included in my portfolio.
