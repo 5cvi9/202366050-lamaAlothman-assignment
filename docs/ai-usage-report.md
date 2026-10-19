@@ -28,6 +28,31 @@ I declare that this report and the attached evidence document all of my AI use i
 **Signature:** Lama Alothman
 
 ---
+## Git Commit History & AI Assistance
+
+The following table summarizes the Git commits made during Assignment 2. ChatGPT (GPT-6) was used to assist with code suggestions, debugging, explanations, documentation, and Git workflow guidance. The changes were reviewed and tested during development.
+
+The commands below show the corresponding Git commit commands. They are included for documentation and do not necessarily represent the exact commands originally typed in the terminal.
+
+| Date | Git Commit Command | Commit Message | AI Tool (Model) | AI Assistance |
+|---|---|---|---|---|
+| Oct 12, 2026 | `git commit -m "Organize CSS into modular stylesheets and Add interactive project filtering"` | Organize CSS into modular stylesheets and Add interactive project filtering | ChatGPT (GPT-6) | CSS organization and project filtering implementation |
+| Oct 12, 2026 | `git commit -m "Improve contact form validation and feedback"` | Improve contact form validation and feedback | ChatGPT (GPT-6) | Input validation and user feedback |
+| Oct 12, 2026 | `git commit -m "Add smooth animations for projects and form feedback"` | Add smooth animations for projects and form feedback | ChatGPT (GPT-6) | CSS animations and transitions |
+| Oct 12, 2026 | `git commit -m "Add real-time validation and error feedback"` | Add real-time validation and error feedback | ChatGPT (GPT-6) | Real-time input validation |
+| Oct 12, 2026 | `git commit -m "Add Readme"` | Add Readme | ChatGPT (GPT-6) | README structure and content |
+| Oct 12, 2026 | `git commit -m "Update technical documentation for Assignment 2"` | Update technical documentation for Assignment 2 | ChatGPT (GPT-6) | Technical documentation |
+| Oct 12, 2026 | `git commit -m "Document AI usage for Assignment 2"` | Document AI usage for Assignment 2 | ChatGPT (GPT-6) | AI usage documentation |
+| Oct 12, 2026 | `git commit -m "Fix project filter fade-in animation"` | Fix project filter fade-in animation | ChatGPT (GPT-6) | Identifying and correcting the animation class mismatch |
+| Oct 12, 2026 | `git commit -m "Add project search and empty state feedback"` | Add project search and empty state feedback | ChatGPT (GPT-6) | Search functionality and empty-state handling |
+| Oct 12, 2026 | `git commit -m "Update README with project search feature"` | Update README with project search feature | ChatGPT (GPT-6) | README updates |
+| Oct 12, 2026 | `git commit -m "Document project search and empty state behavior"` | Document project search and empty state behavior | ChatGPT (GPT-6) | Technical documentation updates |
+| Oct 12, 2026 | `git commit -m "Update AI usage report for project search"` | Update AI usage report for project search | ChatGPT (GPT-6) | AI usage report updates |
+| Oct 19, 2026 | `git commit -m "Extend dark mode styling across entire portfolio Assisted by: ChatGPT (GPT-6)"` | Extend dark mode styling across entire portfolio Assisted by: ChatGPT (GPT-6) | ChatGPT (GPT-6) | Full-page dark mode styling |
+| Oct 19, 2026 | `git commit -m "Add AI usage log and signed declaration"` | Add AI usage log and signed declaration | ChatGPT (GPT-6) | AI declaration and usage log |
+| Oct 19, 2026 | `git commit -m "Expand AI usage reflection and technical learning outcomes"` | Expand AI usage reflection and technical learning outcomes | ChatGPT (GPT-6) | Detailed AI reflection and learning outcomes |
+
+
 
 ## 1. Tools Used & Use Cases
 
